@@ -15,5 +15,32 @@ public class Complex {
 
     }
 
+    /**
+     * 复数加法
+     * @param c2 第二个复数
+     * @return 和
+     */
+    public Complex add(Complex c2){
+        Complex c3 = new Complex(0,0);
+        c3.empty = this.empty+c2.empty;
+        c3.real = this.real+c2.real;
+        return c3;
+    }
 
+    /**
+     * 复数减法
+     * @param c2 第二个复数
+     * @return 差
+     */
+    public Complex sub(Complex c2){
+        Complex c3 = new Complex(0,0);
+        c3.empty = this.empty-c2.empty;
+        c3.real = this.real-c2.real;
+        return c3;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%2f+%2fi",this.real,this.empty);
+    }
 }
